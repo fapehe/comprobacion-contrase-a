@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Formulario</title>
     </head>
     <script>
         function tamaño ()
@@ -32,7 +32,7 @@ and open the template in the editor.
                     
                 <label> Usuario: </label><input type="text" name="usu" id="user" ><br>
                 <label> contraseña: </label><input type="password" name="pass" id="password"><br>
-                <input type="submit" value="confirmar" ><br>
+                <input type="submit" value="confirmar" onclick="tamaño()" ><br>
 
             </form>
         

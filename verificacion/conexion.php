@@ -1,16 +1,16 @@
 <?php
 
-$enlace = mysqli_connect('localhost', 'root', 'mysql2017', 'usuarios', 3306);
+$enlace = mysqli_connect('localhost', 'root', 'fapehesql2017', 'usuarios', 3305);
 
-$consulta="SELECT * FROM usuarios.usuario WHERE idusuario=".$_REQUEST['usu']." and contraseña=".$_REQUEST['pass'].";";
+$user = $_REQUEST['usu'];
+$contraseña = $_REQUEST['pass'];
+
+$consulta="SELECT * FROM usuarios.usuario WHERE idusuario='$user' and contraseña='$contraseña';";
 
 $resultado=mysqli_query($enlace, $consulta);
 
-if (mysqli_num_rows($resultado)==true)
-{
-    echo "ingreso";
-}
-else
-{
-    echo"paila";
+if(mysqli_num_rows($resultado)>0){
+    echo "ingreso!!!";
+}else{
+    echo "error!!!"; 
 }
