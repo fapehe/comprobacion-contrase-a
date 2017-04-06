@@ -9,7 +9,7 @@ $consulta="SELECT * FROM usuarios.usuario WHERE idusuario='$user' and contraseñ
 
 $resultado=mysqli_query($enlace, $consulta);
 
-if(mysqli_num_rows($resultado)>0){
+if(mysqli_num_rows($enlace, $consulta)>0){
     echo "ingreso!!!";
 }else{
     echo "error!!!"; 

@@ -26,13 +26,36 @@ and open the template in the editor.
         }
     
     </script>
+    <style>
+        .cuadro{
+                background-color: yellow;
+                font-size: 25px;
+                
+        }
+        .letrero{
+                font-size: 30px;
+                position: relative;
+                top: 200px;
+                left: 400px;
+        }
+        #user{
+                position: absolute;
+                top: 200px;
+                left: 550px;
+        }
+        #password{
+                position: absolute;
+                top: 250px;
+                left: 550px;
+        }
+    </style>
     <body>
         
         <form onsubmit="return tamaño()"action="conexion.php">
                     
-                <label> Usuario: </label><input type="text" name="usu" id="user" ><br>
-                <label> contraseña: </label><input type="password" name="pass" id="password"><br>
-                <input type="submit" value="confirmar" onclick="tamaño()" ><br>
+                <label class="letrero"> Usuario: </label><input type="text" name="usu" id="user" class="cuadro"><br>
+                <label class="letrero"> contraseña: </label><input type="password" name="pass" id="password" class="cuadro"><br>
+                <input type="submit" value="confirmar" onclick="tamaño()" class="letrero"><br>
 
             </form>
         
